@@ -13,8 +13,8 @@ RUN locale-gen en_US.UTF-8
 RUN dpkg-reconfigure locales
 
 RUN apt-get install python-dev -y
-RUN apt-get install python-pip python-lxml -y
-RUN apt-get build-dep python-psycopg2 -y
+RUN apt-get install python-pip -y
+RUN apt-get build-dep python-psycopg2 python-lxml -y
 
 RUN easy_install -U distribute
 RUN pip install sentry
